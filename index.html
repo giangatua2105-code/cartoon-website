@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoạt Hình Việt - Xem phim hoạt hình trực tuyến</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- =============================================
+         HEADER: Logo + Tìm kiếm + Sắp xếp
+         (position: fixed - cố định khi cuộn)
+         ============================================= -->
+    <header class="main-header">
+      <div class="logo">
+        <img
+          src="images/logo.png"
+          alt="Logo"
+          onerror="this.style.display = 'none'"
+        />
+        <h1>🎬 Hoạt Hình Việt</h1>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="🔍 Tìm kiếm phim theo tên..." />
+        <button>Tìm</button>
+      </div>
+    </header>
+
+    <!-- =============================================
+         HEAD-LINK: Menu điều hướng
+         ============================================= -->
+    <nav class="head-link">
+      <ul>
+        <li><a href="#" class="active">Trang chủ</a></li>
+        <li><a href="#">Mới cập nhật</a></li>
+        <li><a href="#">Xem nhiều nhất</a></li>
+        <li><a href="#">Thể loại</a></li>
+        <li><a href="#">Thiếu nhi</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+
+    <!-- =============================================
+         CONTENT: Layout 2 cột
+         Left Content: Danh sách video
+         Right Content: Khu vực xem video
+         ============================================= -->
+    <div class="content-wrapper">
+      <!-- LEFT CONTENT: Danh sách video -->
+      <aside class="left-content">
+        <h2>📺 Danh sách phim</h2>
+
+        <div class="video-list">
+          <div class="video-item active">
+            <img
+              src="images/thumb1.jpg"
+              alt="Doraemon"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/120x70/3498db/fff?text=1'
+              "
+            />
+            <div class="video-info">
+              <h3>Doraemon - Tập 1</h3>
+              <span>👁 1.2M lượt xem</span>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <img
+              src="images/thumb2.jpg"
+              alt="Conan"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/120x70/e74c3c/fff?text=2'
+              "
+            />
+            <div class="video-info">
+              <h3>Thám tử Conan - Tập 5</h3>
+              <span>👁 980K lượt xem</span>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <img
+              src="images/thumb3.jpg"
+              alt="Tom and Jerry"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/120x70/f1c40f/fff?text=3'
+              "
+            />
+            <div class="video-info">
+              <h3>Tom và Jerry - Tập 12</h3>
+              <span>👁 2.5M lượt xem</span>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <img
+              src="images/thumb4.jpg"
+              alt="Naruto"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/120x70/27ae60/fff?text=4'
+              "
+            />
+            <div class="video-info">
+              <h3>Naruto - Tập 3</h3>
+              <span>👁 750K lượt xem</span>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <img
+              src="images/thumb5.jpg"
+              alt="One Piece"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/120x70/8e44ad/fff?text=5'
+              "
+            />
+            <div class="video-info">
+              <h3>One Piece - Tập 100</h3>
+              <span>👁 1.8M lượt xem</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT CONTENT: Khu vực xem video -->
+      <main class="right-content">
+        <!-- Video HTML5 (local video) -->
+        <div class="video-player">
+          <h2>▶ Đang phát: Doraemon - Tập 1</h2>
+
+          <video controls poster="images/thumb1.jpg" width="100%">
+            <source src="videos/doraemon-tap1.mp4" type="video/mp4" />
+            Trình duyệt của bạn không hỗ trợ thẻ video.
+          </video>
+
+          <div class="video-meta">
+            <p><strong>Chất lượng:</strong> Full HD 1080p</p>
+            <p><strong>Thuyết minh:</strong> Tiếng Việt</p>
+            <p><strong>Lượt xem:</strong> 1.200.000</p>
+            <p>
+              <strong>Mô tả:</strong> Chú mèo máy đến từ tương lai cùng những
+              người bạn trong hành trình phiêu lưu đầy thú vị và bài học ý
+              nghĩa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video YouTube nhúng qua iframe -->
+        <div class="video-player">
+          <h2>🎥 Video YouTube tham khảo</h2>
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <p class="note">Video mẫu nhúng từ YouTube bằng thẻ &lt;iframe&gt;</p>
+        </div>
+      </main>
+    </div>
+
+    <!-- =============================================
+         FOOTER: Thông tin bản quyền
+         ============================================= -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Về chúng tôi</h4>
+          <p>
+            Website xem phim hoạt hình trực tuyến chất lượng cao, thuyết minh
+            tiếng Việt, không quảng cáo.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+            <li><a href="#">Liên hệ hợp tác</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kết nối</h4>
+          <p>📧 contact@hoathinhviet.vn</p>
+          <p>📞 0123 456 789</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Hoạt Hình Việt. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
